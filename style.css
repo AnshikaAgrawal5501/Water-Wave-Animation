@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+}
+
+#text {
+    color: white;
+    font-size: 70px;
+    width: 50vw;
+    margin:auto;
+    padding-top: 200px;
+    text-align: center;
+}
+
+.bullets {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), 
+    rgba(255, 255, 255, 0.005),
+    rgba(255, 255, 255, 0.025),
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.15), 
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.5), 
+    white) ;
+
+    width: 2px;
+    height: 150px;
+    position: absolute;
+    animation: falling 3s linear infinite;
+}
+
+.wave {
+    background-image: url("wave.png");
+    position: absolute;
+    height: 100px;
+    width: 100vw;
+    background-size: 1000px 100px;
+}
+
+.wave-1 {
+    animation: animate1 30s linear infinite;
+    bottom: 0;
+    z-index: 4;
+}
+
+.wave-2 {
+    animation: animate2 15s linear -5s infinite;
+    bottom: 10px;
+    opacity: 0.5;
+    z-index: 3;
+}
+
+.wave-3 {
+    animation: animate1 30s linear -2s infinite;
+    bottom: 15px;
+    opacity: 0.75;
+    z-index: 2;
+}
+
+.wave-4 {
+    animation: animate2 5s linear -5s infinite;
+    bottom: 20px;
+    opacity: 0.25;
+    z-index: 1;
+}
+
+@keyframes falling {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 100vh;
+    }
+}
+
+@keyframes animate1 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -1000px;
+    }
+}
