@@ -20,7 +20,7 @@ setInterval(fun,100);
 
 const text = document.getElementById("text");
 
-let info = ["Happy Birthday !!! to you .", "Anshika. May God Bless You.", "Tones of Love to you"];
+let info = ["Hello", "Anshika", "Agrawal"];
 let data = "";
 let i = 0;
 let j = 0;
